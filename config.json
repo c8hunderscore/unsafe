@@ -1,0 +1,6 @@
+{
+	"port": 8080,
+	"prefix": "/go/",
+	"codec": "xor",
+	"title": "unsafe"
+}

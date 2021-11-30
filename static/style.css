@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css?family=JetBrains+Mono");
+
+:root {
+	--bg-light-0: #efe;
+	--bg-light-1: #ded;
+	--bg-light-2: #cdc;
+	--bg-light-3: #bcb;
+	--bg-light-4: #aba;
+
+	--fg-light-0: #141;
+	--fg-light-1: #252;
+	--fg-light-2: #363;
+	--fg-light-3: #474;
+	--fg-light-4: #585;
+
+	--bg-dark-0: #121;
+	--bg-dark-1: #232;
+	--bg-dark-2: #343;
+	--bg-dark-3: #454;
+	--bg-dark-4: #565;
+
+	--fg-dark-0: #dfd;
+	--fg-dark-1: #cfc;
+	--fg-dark-2: #bfb;
+	--fg-dark-3: #afa;
+	--fg-dark-4: #9f9;
+
+	--bg-white-0: #eee;
+	--bg-white-1: #ddd;
+	--bg-white-2: #ccc;
+	--bg-white-3: #bbb;
+	--bg-white-4: #aaa;
+
+	--fg-white-0: #111;
+	--fg-white-1: #222;
+	--fg-white-2: #333;
+	--fg-white-3: #444;
+	--fg-white-4: #555;
+
+	--bg-black-0: #111;
+	--bg-black-1: #222;
+	--bg-black-2: #333;
+	--bg-black-3: #444;
+	--bg-black-4: #555;
+
+	--fg-black-0: #ddd;
+	--fg-black-1: #ccc;
+	--fg-black-2: #bbb;
+	--fg-black-3: #aaa;
+	--fg-black-4: #999;
+}
+
+html[theme="light"] {
+	--bg: var(--bg-light-0);
+	--fg: var(--fg-light-0);
+
+	--bg0: var(--bg-light-0);
+	--bg1: var(--bg-light-1);
+	--bg2: var(--bg-light-2);
+	--bg3: var(--bg-light-3);
+	--bg4: var(--bg-light-4);
+
+	--fg0: var(--fg-light-0);
+	--fg1: var(--fg-light-1);
+	--fg2: var(--fg-light-2);
+	--fg3: var(--fg-light-3);
+	--fg4: var(--fg-light-4);
+}
+
+html[theme="dark"] {
+	--bg: var(--bg-dark-0);
+	--fg: var(--fg-dark-0);
+
+	--bg0: var(--bg-dark-0);
+	--bg1: var(--bg-dark-1);
+	--bg2: var(--bg-dark-2);
+	--bg3: var(--bg-dark-3);
+	--bg4: var(--bg-dark-4);
+
+	--fg0: var(--fg-dark-0);
+	--fg1: var(--fg-dark-1);
+	--fg2: var(--fg-dark-2);
+	--fg3: var(--fg-dark-3);
+	--fg4: var(--fg-dark-4);
+}
+
+html[theme="white"] {
+	--bg: var(--bg-white-0);
+	--fg: var(--fg-white-0);
+
+	--bg0: var(--bg-white-0);
+	--bg1: var(--bg-white-1);
+	--bg2: var(--bg-white-2);
+	--bg3: var(--bg-white-3);
+	--bg4: var(--bg-white-4);
+
+	--fg0: var(--fg-white-0);
+	--fg1: var(--fg-white-1);
+	--fg2: var(--fg-white-2);
+	--fg3: var(--fg-white-3);
+	--fg4: var(--fg-white-4);
+}
+
+html[theme="black"] {
+	--bg: var(--bg-black-0);
+	--fg: var(--fg-black-0);
+
+	--bg0: var(--bg-black-0);
+	--bg1: var(--bg-black-1);
+	--bg2: var(--bg-black-2);
+	--bg3: var(--bg-black-3);
+	--bg4: var(--bg-black-4);
+
+	--fg0: var(--fg-black-0);
+	--fg1: var(--fg-black-1);
+	--fg2: var(--fg-black-2);
+	--fg3: var(--fg-black-3);
+	--fg4: var(--fg-black-4);
+}
+
+* {
+	font-family: "JetBrains Mono", monospace;
+}
+
+body {
+	background-color: var(--bg);
+	color: var(--fg);
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+
+	padding: 10px;
+
+	user-select: none;
+}
+
+nav > h1 {
+	position: fixed;
+
+	top: 0;
+	left: 0;
+
+	margin: 0;
+	padding: 10px;
+}
+
+@media screen and (max-width: 720px) {
+	nav > h1 {
+		display: none;
+	}
+}
+
+nav > a {
+	margin: 0 5px 0 5px;
+}
+
+a {
+	color: var(--fg3);
+	transition-duration: 0.1s;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: var(--fg);
+}
+
+main {
+	position: absolute;
+
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+
+	text-align: center;
+	justify-content: center;
+}
+
+code {
+	background-color: var(--bg2);
+	padding: 5px;
+}
+
+*:focus {
+	outline: none;
+}
+
+label {
+	font-size: 12px;
+}
+
+select,
+input,
+button {
+	display: block;
+	margin: auto;
+	margin-bottom: 5px;
+}
+
+button[type="button"],
+button[type="submit"],
+input[type="button"],
+input[type="submit"],
+input[type="text"],
+select {
+	padding: 3px;
+
+	background-color: transparent;
+	color: var(--fg);
+
+	border: 2px solid var(--bg4);
+	border-radius: 5px;
+
+	transition-duration: 0.1s;
+}
+
+button[type="button"],
+button[type="submit"],
+input[type="button"],
+input[type="submit"] {
+	padding: 3px 6px 3px 6px;
+	cursor: pointer;
+}
+
+select:hover,
+select:active,
+select:focus,
+button[type="button"]:hover,
+button[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="text"]:hover,
+input[type="password"]:hover,
+button[type="button"]:active,
+button[type="submit"]:active,
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="text"]:active,
+input[type="password"]:active,
+button[type="button"]:focus,
+button[type="submit"]:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+	border-color: var(--fg4);
+}
+
+@media screen and (max-height: 300px), (max-width: 300px) {
+	body {
+		visibility: hidden;
+	}
+
+	body:before {
+		content: "Your browser window is too small to display the page content properly.";
+
+		color: var(--fg);
+		visibility: visible;
+
+		position: fixed;
+
+		top: 50%;
+		left: 50%;
+
+		transform: translate(-50%, -50%);
+	}
+}
+
+#search {
+	font-size: 16px;
+	width: 300px;
+}

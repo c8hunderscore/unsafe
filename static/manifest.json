@@ -1,0 +1,8 @@
+{
+	"name": "unsafe",
+	"short_name": "unsafe",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#efe",
+	"description": "A web proxy"
+}

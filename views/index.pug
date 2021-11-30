@@ -1,0 +1,27 @@
+doctype html
+html(lang="en", theme="light")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+
+		title unsafe
+
+		link(rel="manifest", href="/manifest.json")
+		link(rel="stylesheet", href="/style.css")
+
+		script(src="/settings.js")
+		script(src="/index.js")
+	body
+		nav
+			h1 unsafe
+
+			a(href="/") Home
+			a(href="/settings") Settings
+
+		main
+			h1 unsafe
+			p= description
+
+			input(type="text", id="search")
+			button(type="button", onclick="go()") Take me there

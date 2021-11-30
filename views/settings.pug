@@ -1,0 +1,51 @@
+doctype html
+html(lang="en", theme="light")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+
+		title unsafe
+
+		link(rel="stylesheet", href="/style.css")
+		link(rel="manifest", href="/manifest.json")
+
+		script(src="/settings.js")
+		script(src="/settings-fields.js")
+	body
+		nav
+			h1 unsafe
+
+			a(href="/") Home
+			a(href="/settings") Settings
+
+		main
+			h1 Settings
+
+			form(name="settings", onsubmit="return changeSettings(event)")
+				label(for="settings-theme") Theme
+				select(name="theme", id="settings-theme")
+					option(value="light") Light
+					option(value="dark") Dark
+					option(value="white") White
+					option(value="black") Black
+				
+				label(for="settings-title") Tab Title
+				input(
+					type="text",
+					placeholder="Google",
+					name="title",
+					id="settings-title",
+				)
+				
+				label(for="settings-icon") Tab Icon
+				input(
+					type="text",
+					placeholder="https://",
+					name="icon",
+					id="settings-icon",
+				)
+
+				br
+
+				input(type="submit", value="Save settings")
